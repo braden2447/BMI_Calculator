@@ -18,10 +18,21 @@ def bmi_data_manipulation(weight, height):
     ht[0] = float(ht[0])    
     return wt, ht
     
+def bmi_calculation(w_list, h_list):
+    if w_list[1] == 'pounds' and h_list[1] == 'inches':
+        bmi = w_list[0]/(h_list[0]**2)*703
+    elif w_list[1] == 'kilograms' and h_list[1] == 'meters':
+        bmi = w_list[0]/(h_list[0]**2)
+    else:
+        print('Sorry, the units have been entered incorrectly.')
+    bmi = round(bmi, 1)
+    return bmi
+    
 def main():
     weight, height = bmi_data_input()
     wt, ht = bmi_data_manipulation(weight, height)
-        
+    bmi_value = bmi_calculation(wt, ht)
+    
 
 if __name__ == '__main__':
     main()
