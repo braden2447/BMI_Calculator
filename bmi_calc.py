@@ -24,14 +24,28 @@ def bmi_calculation(w_list, h_list):
     elif w_list[1] == 'kilograms' and h_list[1] == 'meters':
         bmi = w_list[0]/(h_list[0]**2)
     else:
-        print('Sorry, the units have been entered incorrectly.')
+        print('Sorry, the units have been entered incorrectly. Please try again.')
+        quit()
     bmi = round(bmi, 1)
     return bmi
+    
+def bmi_output(bmi):
+    if bmi < 18.5:
+        bmi_range = 'underweight'
+    elif 18.5 <= bmi < 25:
+        bmi_range = 'normal weight'
+    elif 25 <= bmi < 30:
+        bmi_range = 'overweight'
+    else:
+        bmi_range = 'obese'
+    print('Your calculated BMI is {} which places you in the {} range.'.format(bmi, bmi_range))
+        
     
 def main():
     weight, height = bmi_data_input()
     wt, ht = bmi_data_manipulation(weight, height)
     bmi_value = bmi_calculation(wt, ht)
+    bmi_output(bmi_value)
     
 
 if __name__ == '__main__':
