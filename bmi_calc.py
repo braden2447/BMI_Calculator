@@ -8,15 +8,22 @@ def bmi_data_input():
     print('Height: 72 inches')
     print('Now, please enter your information below.')
     weight = input('Weight: ')
-    weight = float(weight)
     height = input('Height: ')
-    height = float(height)
     return weight, height
     
+def bmi_data_manipulation(weight, height):
+    wt = weight.split(' ')
+    wt[0] = float(wt[0])
+    ht = height.split(' ')
+    ht[0] = float(ht[0])    
+    return wt, ht
+    
 def main():
-    bmi_data_input()
+    weight, height = bmi_data_input()
+    wt, ht = bmi_data_manipulation(weight, height)
+        
 
-if __name__ == '__main__'
+if __name__ == '__main__':
     main()
     
           
