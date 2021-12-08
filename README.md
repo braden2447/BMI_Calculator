@@ -2,8 +2,6 @@
 
 ## Author: Braden Garrison
 
-## Due: 9/14/21
-
 ## Program Instructions:
 
 To run the BMI Calculator from the command line, type:
@@ -11,8 +9,8 @@ To run the BMI Calculator from the command line, type:
 ```python bmi_calc.py```
 
 The program will first print a welcome message and a few instructions with examples of proper data input.  
-Follow these examples to input your weight first with the numerical value followed by a space and either "pounds" or "kilograms".
-Then, input your height with the numerical value followed by a space and either "inches" or "meters".
+Follow these examples to input your weight first with the numerical value followed by a space and either *pounds* or *kilograms*.
+Then, input your height with the numerical value followed by a space and either *inches* or *meters*.
 
 The program should then calculate your BMI and associated BMI range and output in the format as follows:
 
